@@ -16,6 +16,8 @@ public abstract class AbstractService {
         this.filePath = filePath;
     }
 
+
+
     public boolean check(Entity entity) throws IOException {
 
         File file = new File(getFilePath());
@@ -35,4 +37,6 @@ public abstract class AbstractService {
         bufferedReader.close();
         return false;
     }
+
+
 }
