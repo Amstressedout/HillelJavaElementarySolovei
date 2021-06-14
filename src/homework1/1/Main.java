@@ -7,29 +7,29 @@ public class Main {
 
         String filePath = "C:/Users/solov/IdeaProjects/HillelJavaElementarySolovei/src/homework1/resources/File.txt";
 
-        Admin admin = new Admin();
+        homework1.Admin admin = new homework1.Admin();
         admin.setName("Michael");
         admin.setSurname("Kebede");
         admin.setAge(26);
         admin.setMail("michaelkebede01@gmail.com");
         admin.setPassword("kebede634512");
 
-        User user = new User();
+        homework1.User user = new homework1.User();
         user.setName("Sonya");
         user.setSurname("Lisovskaya");
         user.setAge(19);
         user.setMail("sonyalisovskaya11221@gmail.com");
         user.setPassword("s1o2n3y4a5");
 
-        UserService userService = new UserService();
+        homework1.UserService userService = new homework1.UserService();
         userService.setFilePath(filePath);
-
-        AdminService adminService = new AdminService();
-        adminService.setFilePath(filePath);
-
         userService.writeUserData(user);
-        adminService.writeUserData(admin);
+
+        homework1.AdminService adminService = new homework1.AdminService();
+        adminService.setFilePath(filePath);
         adminService.writeUserData(user);
+        adminService.writeUserData(admin);
+
 
         System.out.println(userService.check(admin));
         System.out.println(adminService.check(user));
