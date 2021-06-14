@@ -5,7 +5,7 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) throws IOException {
 
-        String filePath = "C:/Users/solov/IdeaProjects/HillelJavaElementarySolovei/resources/File.txt";
+        String filePath = "C:/Users/solov/IdeaProjects/HillelJavaElementarySolovei/src/homework1/resources/File.txt";
 
         Admin admin = new Admin();
         admin.setName("Michael");
@@ -21,14 +21,15 @@ public class Main {
         user.setMail("sonyalisovskaya11221@gmail.com");
         user.setPassword("s1o2n3y4a5");
 
-        AdminService adminService = new AdminService();
-        adminService.setFilePath(filePath);
-        adminService.writeUserData(admin);
-        adminService.writeUserData(user);
-
         UserService userService = new UserService();
         userService.setFilePath(filePath);
+
+        AdminService adminService = new AdminService();
+        adminService.setFilePath(filePath);
+
         userService.writeUserData(user);
+        adminService.writeUserData(admin);
+        adminService.writeUserData(user);
 
         System.out.println(userService.check(admin));
         System.out.println(adminService.check(user));
