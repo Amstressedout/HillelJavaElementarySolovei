@@ -27,9 +27,8 @@ public class Main {
         AdminService adminService = new AdminService();
         adminService.setFilePath(filePath);
 
-        userService.writeUserData(user);
         adminService.writeUserData(admin);
-        adminService.writeUserData(user);
+        userService.writeUserData(user);
 
         System.out.println(userService.check(admin));
         System.out.println(adminService.check(user));
