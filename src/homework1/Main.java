@@ -23,13 +23,13 @@ public class Main {
 
         UserService userService = new UserService();
         userService.setFilePath(filePath);
+        userService.writeUserData(user);
 
         AdminService adminService = new AdminService();
         adminService.setFilePath(filePath);
-
-        userService.writeUserData(user);
-        adminService.writeUserData(admin);
         adminService.writeUserData(user);
+        adminService.writeUserData(admin);
+
 
         System.out.println(userService.check(admin));
         System.out.println(adminService.check(user));
