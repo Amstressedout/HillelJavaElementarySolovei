@@ -18,7 +18,7 @@ public abstract class AbstractService {
 
 
 
-    public boolean check(Entity entity) throws IOException {
+    public boolean check(homework1.Entity entity) throws IOException {
 
         File file = new File(getFilePath());
         FileReader fileReader = new FileReader(file);
