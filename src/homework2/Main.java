@@ -35,9 +35,6 @@ public class Main {
             nicknameSet.addAll(nicknamesList1);
             nicknamesList1.addAll(nicknameSet);
 
-            information.setNicknamesList(nicknamesList1);
-            information.setMailsSet(mailSet1);
-            information.setMailsNicknamesMap(mailNicknameMap1);
         }
         return information;
     }
